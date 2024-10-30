@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+:root{
+    --box-size: 40rem;
+  --border-thickness: 5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jua', sans-serif;
+}
+body{
+    background-color: #b3e1a0;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 1vw;
+    border-radius: 40px;
+    background-color: #fef9c2;
+}
+
+.container section{
+    padding: 2vw;
+    border-radius: 35px;
+    border: 1px dashed #b3e1a0;
+    border-style: dashed;
+    border-width: 10px;
+    border-spacing: 10px;
+}
+
+.post-it{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--box-size);
+    width: var(--box-size);
+  }
+  
+  .border-lights {
+    background-image: radial-gradient(#fc98a4 70%, transparent 30%);
+    background-size: calc(var(--border-thickness) * 2) calc(var(--border-thickness) * 2);
+    background-position: 0 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .border-lights::before {
+    content: "";
+    display: block;
+    background-color: #fc98a4;
+    position: absolute;
+    top: var(--border-thickness);
+    left: var(--border-thickness);
+    height: calc(var(--box-size) - var(--border-thickness) * 2);
+    width: calc(var(--box-size) - var(--border-thickness) * 2);
+    z-index: -1;
+  }
